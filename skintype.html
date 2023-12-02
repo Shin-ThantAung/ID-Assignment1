@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SkinType Subpage</title>
+        <link href="style.css" rel = "stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "heading">SkinType</h1>
+        
+        <div class = "container">
+            <p><b>
+                Step 1: Wash your face with water and wait for an hour.<br>
+                Step 2: After an hour, examine your face.</b><br><br>
+            </p>
+
+            <form>
+                
+                How does your T-Zone feel:
+                <select id = "select1">
+                    <option value="dry">Dry</option>
+                    <option value="oily">Oily</option>
+                </select>
+
+                <br>
+
+                <lable for = "Cheek">How does your cheeks feel:</lable>
+
+                <select id = "select2">
+                    <option value="dry">Dry</option>
+                    <option value="oily">Oily</option>
+                </select>
+            </form>
+
+            <br><br>
+            <button type="button" onclick="myFunction()">Find out your skin care</button>
+
+        </div>
+
+        <br><br>
+        <p id="Result"></p>
+
+        <nav class = "nav-links">
+            <ul>
+                <li><a href="routine.html">Learn how to do skincare routine</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            function myFunction() {
+                var tZ = document.getElementById("select1").value;
+                var c = document.getElementById("select2").value;
+
+                if ( c == "oily"){
+                    result = "Oily"
+                }
+                else if( tZ == "oily"){
+                    result = "Combination"
+                }
+                else{
+                    result = "Dry"
+                }
+                document.getElementById("Result").innerHTML = "Your skintype is : "+ result + " skin.";
+            }
+        </script>
+    </body>
+</html>
